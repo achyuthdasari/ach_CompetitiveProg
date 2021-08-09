@@ -35,4 +35,19 @@
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	dicelst=list(str(dice))
+	handlst=list(str(hand))
+	print(dicelst)
+	if handlst[0]==handlst[1]:
+		handlst[2]=dicelst.pop()
+	elif handlst[1]==handlst[2]:
+		handlst[0]=dicelst.pop()
+	else:
+		highest=handlst[0]
+		for i in handlst:
+			if i>highest:
+				highest=i
+		handlst[0]=highest
+		handlst[1]=dicelst.pop()
+		handlst[2]=dicelst.pop()
+	return int("".join(sorted(handlst,reverse=True))),int("".join(dicelst))
