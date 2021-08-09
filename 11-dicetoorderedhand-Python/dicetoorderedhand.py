@@ -12,4 +12,10 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	lst=sorted([a,b,c])
+	ans=0
+	while(len(lst)!=0):
+		ans=10*ans+lst.pop()
+	return ans
+
+		
