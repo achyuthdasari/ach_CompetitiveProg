@@ -7,4 +7,11 @@
 
 def handtodice(hand):
 	# your code goes here
-	pass
+	lst=[]
+	for i in str(hand):
+		lst.append(int(i))		
+	return (lst[0],lst[1],lst[2])
+
+print(handtodice(123))
+
+
