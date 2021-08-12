@@ -40,5 +40,55 @@
 
 
 def bonusplaythreediceyahtzee(dice):
-	# Your code goes here
-	pass
+	score1=(dice%1000)
+	dice=dice//1000
+	score2=dice%10000
+	
+	lst1=[]
+	for i in str(score1):
+		lst1.append(i)
+
+	lst2=[]
+	for i in str(score2):
+		lst2.append(i)
+	
+	
+	if (lst1[0]==lst1[1])and (lst1[2]==lst1[1]):
+		return (score1,20+3*int(lst1[0]))
+
+
+	
+	flag=0
+	for m in range(2):
+		
+		if (lst1[0]==lst1[1]):
+			flag=0
+			lst1[2] = lst2[3-m*2]
+			# return (score1,10+2*int(lst1[0]))		
+		
+		elif(lst1[2]==lst1[1]):
+			flag=1
+			lst1[0] = lst2[3-m*2]
+			
+		elif lst1[2]==lst1[0]:
+			flag=2
+			lst1[1] = lst2[3-m*2]
+			# return (score1,10+2*int(lst1[2]))
+		
+		else:
+			flag=3
+			lst1[0]= max(lst1[0],lst1[2],lst1[1])
+			lst1[1]= lst2[3-m*2]
+			lst1[2]= lst2[2-m*2]
+
+
+	if (lst1[0]==lst1[1])and (lst1[2]==lst1[1]):
+		return (int("".join(sorted(lst1, reverse=True))),20+3*int(lst1[0]))
+
+	if flag in [0,1,2]:
+		return (int("".join(sorted(lst1, reverse=True))),10+2*int(lst1[flag]))	
+	else:
+
+		return (int("".join(sorted(lst1, reverse=True))), int(max(lst1[0],lst1[2],lst1[1])))
+
+		
