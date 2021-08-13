@@ -10,6 +10,9 @@ class Element(object):
     def __init__(self, value):
         self.value = value
         self.next = None
+    
+    def __str__(self):
+        return str(self.value)
         
 class LinkedList(object):
     def __init__(self, head=None):
@@ -25,22 +28,55 @@ class LinkedList(object):
             self.head = new_element
 
     def insert_first(self, new_element):
-        "Insert new element as the head of the LinkedList"
-        pass
+        # "Insert new element as the head of the LinkedList"
+        node= Element(new_element)
+        if self.head==None:
+            self.head=node
+            return
+        node.next=self.head
+        self.head=node
 
     def delete_first(self):
-        "Delete the first (head) element in the LinkedList as return it"
-        pass
+        # "Delete the first (head) element in the LinkedList as return it"
+        node=self.head
+        if self.head==None:
+            return None
+        self.head=node.next
+        return int(str(node))
+
+    
+    def delete_first1(self):
+        # "Delete the first (head) element in the LinkedList as return it"
+        node=self.head
+        self.head=node.next
+        return node
+
 
 class stack(object):
     def __init__(self,top=None):
         self.ll = LinkedList(top)
 
     def push(self, new_element):
-        "Push (add) a new element onto the top of the stack"
-        pass
+        # "Push (add) a new element onto the top of the stack"
+        self.ll.insert_first(new_element)
 
     def pop(self):
-        "Pop (remove) the first element off the top of the stack and return it"
-        pass
+        # "Pop (remove) the first element off the top of the stack and return it"
+        return self.ll.delete_first()
+
+
+# e1 = Element(1)
+# e2 = Element(2)
+# e3 = Element(3)
+# e4 = Element(4)
+
+# # Start setting up a Stack
+# stack = stack(e1)
+
+# # Test stack functionality
+# stack.push(e2)
+# stack.push(e3)
+
+
+# print(str(stack.pop().value))
     
