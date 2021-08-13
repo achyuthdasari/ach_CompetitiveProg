@@ -6,6 +6,11 @@
 
 
 def fun_nearestodd(n):
-	return 0
+	import math
+	if math.ceil(n)%2==1:
+		return math.ceil(n)
+	else:
+		return math.ceil(n)-1
+	
 
 
