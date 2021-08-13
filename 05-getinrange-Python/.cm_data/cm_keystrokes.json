@@ -1,0 +1,25 @@
+{
+    "getinrange.py": [
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Fri Aug 13 2021 07:42:23",
+            "keyStrokeInfo": "\r\n\t",
+            "position": "10,25"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Fri Aug 13 2021 07:43:06",
+            "keyStrokeInfo": "",
+            "position": "11,1"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Fri Aug 13 2021 07:43:07",
+            "keyStrokeInfo": "",
+            "position": "10,25"
+        }
+    ]
+}
