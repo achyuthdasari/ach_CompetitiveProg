@@ -10,8 +10,29 @@
 # assert(applyCaesarCipher("zodiac", -2) == "xmbgya")
 
 
+
+def encode(l,s):
+	if s<0:
+		s=26+s
+	if ord(l)<91 and ord(l)>64:
+		if (ord(l)-64+s)==26:
+			return 'Z'
+		return chr(64+((ord(l)-64+s)%26))
+	elif ord(l)>96 and ord(l)<123 :
+		if (ord(l)-96+s)==26:
+			return 'z'
+		return chr(96+((ord(l)-96+s)%26))
+	else:
+		return l
+
+
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	stri=""
+	for i in msg:
+		stri+=encode(i,shift)
+	return stri
+
+# print(ord('A'),ord('a'),ord('z'))
 
 
 
