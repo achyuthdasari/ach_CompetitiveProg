@@ -5,4 +5,12 @@
 
 def removeduplicate(text):
 	# Your code goes here
-	pass
+	sett=set()
+	strin=""
+	for i in text:
+		if i not in sett:
+			strin+=i
+		sett.add(i)
+	return strin
+
+
