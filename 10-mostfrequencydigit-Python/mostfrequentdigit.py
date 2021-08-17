@@ -4,4 +4,25 @@
 
 def mostfrequentdigit(n):
 	# your code goes here
-	pass
+	dictin={}
+	high=0
+	for i in str(n):
+		if i not in dictin:
+			dictin[i]=1
+		else:
+			dictin[i]+=1
+		if dictin[i]>=high:
+			high=dictin[i]
+	lst=[]
+	for i in dictin:
+		if dictin[i]==high:
+			lst.append(i)
+	
+	lst=sorted(lst)
+	return int(lst[0])
+
+
+	
+
+
+
