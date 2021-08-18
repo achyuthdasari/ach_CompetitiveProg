@@ -6,4 +6,14 @@
 
 def smallestdifference(a):
 	# Your code goes here
-	pass
+	if len(a)==0:
+		return -1
+	s=sorted(a)
+	diff=s[1]-s[0]
+	for i in range(1,len(s)):
+		diff=min(diff,s[i]-s[i-1])
+	return diff
+
+
+print(smallestdifference([3,-7,0]))
+
