@@ -5,4 +5,8 @@
 
 def isperfectsquare(n):
 	# your code goes here
-	pass
+	try:
+		n=int(n)
+		return n**0.5==int(n**0.5)
+	except:
+		return False
