@@ -11,4 +11,24 @@
 
 def lookandsay(a):
 	# Your code goes here
-	pass
+	# dictin={}
+	# for i in a:
+	# 	if i in dictin:
+	# 		dictin[i]+=1
+	# 	else:
+	# 		dictin[i]=1
+	lst=[]
+	if a==[]:
+		return []
+	count=1
+	for i in range(len(a)-1):
+		if a[i]!=a[i+1]:
+			lst.append((count,a[i]))
+			count=1
+		else:
+			count+=1
+	lst.append((count,a[-1]))
+		
+	return lst
+
+
