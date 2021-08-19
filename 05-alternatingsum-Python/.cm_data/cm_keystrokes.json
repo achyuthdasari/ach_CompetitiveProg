@@ -1035,6 +1035,20 @@
             "keyStrokeTimeStamp": "Thu Aug 19 2021 11:15:16",
             "keyStrokeInfo": "1",
             "position": "17,17"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Thu Aug 19 2021 11:16:18",
+            "keyStrokeInfo": "",
+            "position": "5,1"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Thu Aug 19 2021 11:16:18",
+            "keyStrokeInfo": "",
+            "position": "5,1"
         }
     ]
 }
