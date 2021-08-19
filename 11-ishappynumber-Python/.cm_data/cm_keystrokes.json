@@ -1,0 +1,39 @@
+{
+    "ishappynumber.py": [
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Thu Aug 19 2021 15:23:10",
+            "keyStrokeInfo": "",
+            "position": "22,5"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Thu Aug 19 2021 15:23:10",
+            "keyStrokeInfo": "",
+            "position": "22,4"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Thu Aug 19 2021 15:23:10",
+            "keyStrokeInfo": "",
+            "position": "22,3"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Thu Aug 19 2021 15:23:11",
+            "keyStrokeInfo": "",
+            "position": "22,2"
+        },
+        {
+            "operation": "PASTE",
+            "lines": 15,
+            "keyStrokeTimeStamp": "Thu Aug 19 2021 15:23:11",
+            "keyStrokeInfo": "lst=[]\r\n\twhile(True):\r\n\t\tsum=0\r\n\t\twhile(n>0):\r\n\t\t\tsum+=(n%10)**2\r\n\t\t\tn=n//10\r\n\t\t# print(sum,\"----------\")\r\n\t\tif sum==1:\r\n\t\t\treturn True\r\n\t\telse:\r\n\t\t\tif sum in lst:\r\n\t\t\t\treturn False\r\n\t\t\t# print(sum)\r\n\t\t\tlst.append(sum)\r\n\t\t\tn=sum",
+            "position": "22,2"
+        }
+    ]
+}
