@@ -40,5 +40,4 @@ def fun_nth_happy_prime(n):
 			return num
 		num+=1
 
-# print(is_happy_num(5))
 	
