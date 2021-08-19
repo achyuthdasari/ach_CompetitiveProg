@@ -8,5 +8,16 @@
 
 
 def fun_interleave(s1,s2):
-	return ""
+	leng=min(len(s1),len(s2))
+	strin=""
+	for i in range(leng):
+		strin+=s1[i]+s2[i]
+	if len(s1)>len(s2):
+		strin+=s1[leng:]
+	elif len(s2)>len(s1):
+		strin+=s2[leng:]
+	return strin
+
+	
+
 	
