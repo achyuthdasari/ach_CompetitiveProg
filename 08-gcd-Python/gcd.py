@@ -10,4 +10,12 @@
 
 def gcd(m, n):
 	# your code goes here
-	pass
+	m,n=max(m,n),min(m,n)
+	if n==0:
+		return m
+	while(m%n!=0):
+		temp=m
+		m=n
+		n=temp%n
+	return n
+
