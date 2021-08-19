@@ -15,5 +15,32 @@
 # assert(nth_happy_number(8) == 31)
 
 
+
+def ishappynumber(n):
+	# your code goes here
+	lst=[]
+	while(True):
+		sum=0
+		while(n>0):
+			sum+=(n%10)**2
+			n=n//10
+		# print(sum,"----------")
+		if sum==1:
+			return True
+		else:
+			if sum in lst:
+				return False
+			# print(sum)
+			lst.append(sum)
+			n=sum
+
+
 def nth_happy_number(n):
-	return 0
+	num=1
+	cnt=0
+	while(True):
+		if ishappynumber(num) :
+			cnt+=1
+		if cnt==n:
+			return num
+		num+=1
