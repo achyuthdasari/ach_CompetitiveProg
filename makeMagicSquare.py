@@ -35,4 +35,77 @@
 
 def makeMagicSquare(n):
     # Your code goes here...
-    pass
+    if n<0 or n%2==0:
+        return None
+    square=[[0]*n for i in range(n)]
+    
+    square[n//2][n-1]=1
+    a=n//2
+    b=n-1
+
+    for i in range(2, n*n+1):
+        a=a-1
+        b=b+1
+        # print(a,b)
+        if a==-1 and b==n:
+            a=0
+            b=n-2
+        elif a<0:
+            a=n+a
+        elif b>n-1:
+            b=b-n
+        if square[a][b]==0:
+            square[a][b]=i
+        else:
+            b=b-2
+            if b<0:
+                b=n+b
+            a=a+1
+            if a>n-1:
+                a=a-n+1
+            square[a][b]=i
+        # print(square)
+    return square
+
+
+def ismostlymagicsquare(a):
+	# Your code goes here
+	sum=0
+	for i in a[0]:
+		sum+=i
+	for i in a:
+		curr=0
+		for j in i:
+			curr+=j
+		if curr!=sum:
+			return False
+	
+	for i in range(len(a)):
+		curr=0
+		for j in range(len(a)):
+			curr+=a[j][i]
+		if curr!=sum:
+			return False
+
+	curr=0
+	for i in range(len(a)):
+		curr+=a[i][i]
+	if curr!=sum:
+		return False
+	
+	curr=0
+	for i in range(len(a)):
+		curr+=a[i][len(a)-1-i]
+	if curr!=sum:
+		return False
+	return True
+            
+
+print(ismostlymagicsquare(makeMagicSquare(3)))
+print(ismostlymagicsquare(makeMagicSquare(5)))
+print(ismostlymagicsquare(makeMagicSquare(15)))
+
+
+        
+
+
