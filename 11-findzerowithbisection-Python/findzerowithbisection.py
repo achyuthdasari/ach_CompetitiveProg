@@ -12,8 +12,8 @@ def findzerowithbisection(x, epsilon):
 	a=1
 	b=x
 	mid=(a+b)/2
-	while(mid-a>=epsilon or b-mid>=epsilon):
-		if mid**2<x:
+	while(b-a>=epsilon):
+		if mid**2<=x:
 			a=mid
 		else:
 			b=mid
