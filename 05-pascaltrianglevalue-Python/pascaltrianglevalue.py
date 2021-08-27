@@ -16,18 +16,19 @@
 
 def fun_pascaltrianglevalue(row, col):
 	if col-1>row:
-		return None
+		return 0
 	if col==0:
 		return 1
-	if col-1 == row:
-		return 1
-	level = row
-	triangle=[]
-	for i in range(level):
-		triangle.append([])
+	triangle=[[0]*(row+2) for i in range(row+1)]
 	for i in triangle:
-		for j in range(row+1):
-			i.append
+		i[0]=1
+	for i in range(1,row+1):
+		for j in range(1, row+2):
+			triangle[i][j]= triangle[i-1][j]+triangle[i-1][j-1]
+	# print(triangle)
+	return triangle[row][col]
+
+print(fun_pascaltrianglevalue(1, 1))
 
 
 
