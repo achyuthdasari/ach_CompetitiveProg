@@ -5,6 +5,21 @@
 
 
 def fun_kth_occurrences(s, n):
-	return 'a'
+	dictin={}
+	for i in s:
+		if i in dictin:
+			dictin[i]+=1
+		else:
+			dictin[i]=1
+	print(dictin)
+	
+	num=1
+	def funct(i):
+		return dictin[i]
+	for j in sorted(dictin, key=funct,reverse=True):
+		if num==n:
+			return j
+		num+=1
+print(fun_kth_occurrences("helllo woorld", 2))
 
 
