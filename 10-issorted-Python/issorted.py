@@ -7,4 +7,17 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	if len(a)<2:
+		return True
+	for i in range(2,len(a)):
+		if a[i]>a[i-1] and a[0]>a[1]:
+			return False
+		elif a[i]<a[i-1] and a[0]<a[1]:
+			return False
+	return True
+
+print(issorted([10, 9, 8, 7, 6, 5, 4, 3, 2, 10]))
+
+
+
+
