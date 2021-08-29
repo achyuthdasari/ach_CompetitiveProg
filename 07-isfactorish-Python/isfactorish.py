@@ -12,5 +12,15 @@
 
 
 def fun_isfactorish(n):
-	return False
+	n=abs(n)
+	num=n
+	cnt=0
+	lst=[]
+	while(n>0):
+		cnt+=1
+		if (n%10 in lst) or cnt>3 or n%10==0 or num%(n%10)!=0:
+			return False
+		lst.append(n%10)
+		n=n//10
+	return True
 
