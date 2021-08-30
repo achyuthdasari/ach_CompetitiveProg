@@ -7,8 +7,20 @@
 # strings and averages 13 and 14 to return 13.5. Also, getAverage('a,b,c') returns 0.
 
 
-
-
 def fun_getaverage(s): 
-	return 0.0
+	lst=s.split(",")
+	print(lst)
+	count=0
+	sum=0
+	for i in lst:
+		try:
+			sum+=int(i)
+			count+=1
+		except:
+			continue
+	if count==0:
+		return 0.0
+	return sum/count
 
+
+fun_getaverage("1,2,3,4,5,6,7,8,9,10")
