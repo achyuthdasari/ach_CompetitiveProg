@@ -2,6 +2,8 @@
 # and returns True if L does not contain any primes, and False otherwise.
 
 
+
+def isprime
 def fun_hasnoprimes(l):
 	return True
 
