@@ -5,4 +5,12 @@
 
 def hasduplicates(L):
 	# Your code goes here
-	pass
+	sett=set()
+	for i in L:
+		for j in i:
+			if j in sett:
+				return True
+			sett.add(j)
+	return False
+	
+		
